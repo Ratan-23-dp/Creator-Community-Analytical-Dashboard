@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* 1. THEME VARIABLES (Dark Mode Default) */
+:root {
+    --bg-color: #050505;
+    --card-bg: #0a1111;
+    --text-color: #ffffff;
+    --accent-color: #00f2ff;
+    --input-bg: rgba(255, 255, 255, 0.05);
+    --shadow: rgba(0, 242, 255, 0.2);
+}
+
+/* 2. LIGHT THEME COLORS */
+body.light-mode {
+    --bg-color: #f0f2f5;
+    --card-bg: #ffffff;
+    --text-color: #333333;
+    --accent-color: #007bff;
+    --input-bg: #f9f9f9;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+* { 
+    box-sizing: border-box; 
+    font-family: 'Poppins', sans-serif; 
+    transition: background 0.3s, color 0.3s; 
+}
+
+body { 
+    background: var(--bg-color); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    margin: 0; 
+    color: var(--text-color); 
+}
+
+/* Theme Toggle Button */
+.theme-switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--card-bg);
+    border: 1.5px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px var(--shadow);
+}
+
+.container { 
+    position: relative; 
+    width: 400px; 
+    background: var(--card-bg); 
+    border: 1.5px solid var(--accent-color); 
+    border-radius: 20px; 
+    padding: 40px;
+    box-shadow: 0 0 30px var(--shadow); 
+}
+
+.form-container { display: none; width: 100%; }
+.form-container.active { display: block; animation: fadeIn 0.4s ease; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+form { text-align: center; }
+h1 { margin: 0 0 20px 0; color: var(--accent-color); font-weight: 600; }
+
+input { 
+    width: 100%; 
+    padding: 12px 15px; 
+    margin: 10px 0; 
+    background: var(--input-bg); 
+    border: none; 
+    border-bottom: 2px solid var(--accent-color); 
+    color: var(--text-color); 
+    outline: none; 
+}
+
+.btn { 
+    width: 100%;
+    margin-top: 25px; 
+    padding: 12px; 
+    background: transparent; 
+    border: 1.5px solid var(--accent-color); 
+    color: var(--accent-color); 
+    border-radius: 25px; 
+    cursor: pointer; 
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.btn:hover { background: var(--accent-color); color: var(--card-bg); }
+
+.toggle-txt { 
+    color: #888; 
+    cursor: pointer; 
+    font-size: 14px; 
+    margin-top: 20px;
+    display: block;
+}
+.toggle-txt span { color: var(--accent-color); font-weight: 600; text-decoration: underline; }

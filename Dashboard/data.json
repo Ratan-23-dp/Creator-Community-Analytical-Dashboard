@@ -1,0 +1,36 @@
+{
+  "youtube": {
+    "summary": { "followers": "12.4K", "views": "1.2M", "engagement": "8.5%", "ctr": "4.2%" },
+    "chart": {
+      "labels": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+      "data": [450, 890, 1200, 950, 1100, 1400, 1350],
+      "color": "#FF0000"
+    },
+    "pie": {
+      "labels": ["Search", "Suggested", "Direct"],
+      "data": [40, 35, 25],
+      "colors": ["#FF0000", "#ff4d4d", "#ff9999"]
+    },
+    "topPosts": [
+      { "title": "Python for Beginners", "metric": "450K views", "status": "Trending" },
+      { "title": "Top 10 AI Tools", "metric": "320K views", "status": "Stable" }
+    ]
+  },
+  "instagram": {
+    "summary": { "followers": "8.1K", "views": "250K", "engagement": "12.1%", "ctr": "1.8%" },
+    "chart": {
+      "labels": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+      "data": [300, 450, 600, 800, 750, 900, 1100],
+      "color": "#E1306C"
+    },
+    "pie": {
+      "labels": ["Reels", "Explore", "Feed"],
+      "data": [60, 25, 15],
+      "colors": ["#E1306C", "#f77737", "#ffdc80"]
+    },
+    "topPosts": [
+      { "title": "New Dashboard Reel", "metric": "50K likes", "status": "Viral" },
+      { "title": "OJT Life Photo", "metric": "12K likes", "status": "Stable" }
+    ]
+  }
+}

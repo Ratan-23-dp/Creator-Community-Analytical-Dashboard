@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytical Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="logo">Analytix<span>Core</span></div>
+            <div class="nav-actions">
+                <select id="platform-select">
+                    <option value="youtube">YouTube</option>
+                    <option value="instagram">Instagram</option>
+                </select>
+                <button id="theme-btn">🌓 Theme</button>
+            </div>
+        </header>
+
+        <main class="dashboard-grid">
+            <div class="card kpi"><small>Followers</small><h2 id="followers">--</h2></div>
+            <div class="card kpi"><small>Total Views</small><h2 id="views">--</h2></div>
+            <div class="card kpi"><small>Engagement</small><h2 id="engagement">--</h2></div>
+            <div class="card kpi"><small>Avg. CTR</small><h2 id="ctr">--</h2></div>
+
+            <div class="card line-chart-container">
+                <h3>Growth Over Time</h3>
+                <div class="canvas-wrapper"><canvas id="lineChart"></canvas></div>
+            </div>
+
+            <div class="card pie-chart-container">
+                <h3>Traffic Distribution</h3>
+                <div class="canvas-wrapper"><canvas id="pieChart"></canvas></div>
+            </div>
+
+            <div class="card table-container">
+                <h3>High-Performing Content</h3>
+                <table>
+                    <thead><tr><th>Content</th><th>Metric</th><th>Status</th></tr></thead>
+                    <tbody id="post-table-body"></tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

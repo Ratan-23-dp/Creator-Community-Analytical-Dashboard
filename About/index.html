@@ -1,11 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <title>About Us | Cherroi AI Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>About</h1>
+  <header class="navbar">
+  <div class="nav-left" onclick="location.href='index.html'" style="cursor:pointer">
+    <div class="logo-box"></div>
+    <div class="logo-text">
+      <span class="brand-main">Analytix <span>Core</span></span>
+      <span class="brand-sub">Analytical Dashboard</span>
+    </div>
+  </div>
+
+  <nav class="nav-links">
+    <a href="../Home/index.html">Home</a>
+    <a href="../Dashboard/index.html">Dashboard</a>
+    <a href="index.html" class="active">About Us</a>
+    <a href="../contact/index.html">Contact</a>
+    <a href="../Login/index.html" class="nav-login-btn">Login</a>
+
+    <button class="theme-switch-nav" id="themeBtn">
+      <i class="fas fa-moon" id="themeIcon"></i>
+    </button>
+  </nav>
+</header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>About Our Creator Community Dashboard</h1>
+        <p>
+          Cherroi AI is built to help students and creators track their growth,
+          understand audience behavior, and make smarter content decisions – all
+          inside one simple dashboard.
+        </p>
+        <ul class="hero-points">
+          <li>Real-time creator analytics</li>
+          <li>Simple, student-friendly insights</li>
+        </ul>
+        <button class="primary-btn" onclick="location.href='../Dashboard/index.html'">Start Exploring Insights</button>
+      </div>
+      <div class="hero-visual">
+        <div class="mock-card main-card"><div class="scan-line"></div></div>
+        <div class="mock-card small-card top-right">
+          <div class="mock-circle"></div>
+          <div class="mock-lines"></div>
+        </div>
+        <div class="mock-card small-card bottom-left">
+          <div class="mock-bar-group"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section mission">
+      <h2>Our Mission</h2>
+      <p>
+        We created Cherroi AI to remove the fear of “complicated analytics”
+        for student creators. Instead of confusing graphs and heavy dashboards,
+        we focus on clear, clean visuals and easy explanations that help you
+        take action on your content and grow your community with confidence.
+      </p>
+    </section>
+
+    <section class="section features">
+      <h2>What We Do</h2>
+      <div class="card-grid">
+        <article class="card">
+          <div class="card-icon">📊</div>
+          <h3>Creator Analytics</h3>
+          <p>Track views, engagement, and growth across your content so you can see what is working and what is not in seconds.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">👥</div>
+          <h3>Community Insights</h3>
+          <p>Understand your audience behavior with simple charts that show how your community interacts with your posts over time.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">⚡</div>
+          <h3>Content Performance</h3>
+          <p>Compare videos, posts, or reels side by side and decide where to focus your energy for maximum impact.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="stats-strip">
+      <div class="stat-item">
+        <span class="stat-number">100+</span>
+        <span class="stat-label">Creators analyzed</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">25+</span>
+        <span class="stat-label">Metrics tracked</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">24/7</span>
+        <span class="stat-label">Insights access</span>
+      </div>
+    </section>
+
+    <section class="section values">
+      <h2>Our Values</h2>
+      <div class="values-grid">
+        <div class="value-card">
+          <h3>Transparency</h3>
+          <p>Clear numbers, clear visuals, and no hidden complexity.</p>
+        </div>
+        <div class="value-card">
+          <h3>Simplicity</h3>
+          <p>Easy-to-use dashboards made with students and beginners in mind.</p>
+        </div>
+        <div class="value-card">
+          <h3>Learning</h3>
+          <p>Every chart and metric teaches you something new about your content.</p>
+        </div>
+        <div class="value-card">
+          <h3>Growth</h3>
+          <p>Our goal is to help you grow your skills, audience, and confidence.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section team">
+      <h2>Meet the Team</h2>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="avatar-wrapper">
+             <img src="./mayank.jpeg" alt="Mayank Kumar" class="team-img">
+           
+          </div>
+          <h3>Mayank Kumar</h3>
+          <p class="role">Project Lead</p>
+          <p class="bio">Handles the overall dashboard design, charts integration, and user experience.</p>
+        </div>
+        <div class="team-card">
+          <div class="avatar-wrapper">
+            <img src="./ratan.jpeg" alt="Ratan Raj Prince" class="team-img">
+          </div>
+          <h3>Ratan Raj Prince</h3>
+          <p class="role">Data & Analytics</p>
+          <p class="bio">Works on choosing and structuring creator metrics for clear insights.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta">
+      <h2>Ready to Explore Your Creator Journey?</h2>
+      <p>Open the dashboard, connect your content, and start understanding your growth in a more meaningful way.</p>
+      <button class="primary-btn" onclick="location.href='../Dashboard/index.html'">Go to Dashboard</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>

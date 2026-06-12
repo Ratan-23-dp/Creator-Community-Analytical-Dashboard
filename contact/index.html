@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome to contact page </title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <button class="theme-switch" id="themeBtn">
+    <i class="fas fa-moon" id="themeIcon"></i>
+</button>
+
+    <div class="contact-card">
+        <h1>Contact Support</h1>
+        <p class="subtitle">Enter your problem and it will be sent to my email.</p>
+        
+        <form id="contactForm" action="https://formspree.io/f/mayankkumariitian65@gmail.com" method="POST">
+            <input type="text" name="name" id="name" placeholder="Full Name" required>
+            <input type="email" name="email" id="email" placeholder="Your Email" required>
+            <textarea name="message" id="message" placeholder="Describe your problem here..." required></textarea>
+            
+            <button type="submit" class="btn" id="submitBtn">Send to Admin</button>
+        </form>
+
+        <div class="divider"></div>
+
+        <div class="info-section">
+            <a href="https://www.linkedin.com/in/mayank-kumar-505a57375" target="_blank" class="info-link">
+                <i class="fab fa-linkedin"></i> LinkedIn Profile
+            </a>
+            <a href="tel:+8797787409" class="info-link">
+                <i class="fas fa-phone-alt"></i> +918797787...
+            </a>
+            <a href="mailto:mayankkumariitian65@gmail.com" class="info-link">
+                <i class="fas fa-envelope"></i> mayankkumariitian65@gmail.com
+            </a>
+        </div>
+    </div>
+<script src="./script.js"> </script>
+</body>
+</html>

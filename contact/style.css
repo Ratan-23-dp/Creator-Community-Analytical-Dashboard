@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        /* 1. THEME VARIABLES */
+        :root {
+            --bg-color: #050505;
+            --card-bg: #0a1111;
+            --text-color: #ffffff;
+            --accent-color: #00f2ff;
+            --input-bg: rgba(255, 255, 255, 0.05);
+            --shadow: rgba(0, 242, 255, 0.2);
+            --secondary-text: #888;
+        }
+
+        /* 2. LIGHT THEME COLORS */
+        body.light-mode {
+            --bg-color: #f0f2f5;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --accent-color: #007bff;
+            --input-bg: #f9f9f9;
+            --shadow: rgba(0, 0, 0, 0.1);
+            --secondary-text: #666;
+        }
+
+        * { box-sizing: border-box; font-family: 'Poppins', sans-serif; transition: all 0.3s ease; }
+        
+        body { 
+            background: var(--bg-color); 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+            margin: 0; 
+            color: var(--text-color); 
+            padding: 20px;
+        }
+
+        /* Theme Toggle Button */
+        .theme-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--card-bg);
+            border: 1.5px solid var(--accent-color);
+            color: var(--accent-color);
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 10px var(--shadow);
+            z-index: 1000;
+        }
+
+        .contact-card { 
+            width: 100%; 
+            max-width: 500px; 
+            background: var(--card-bg); 
+            border: 1.5px solid var(--accent-color); 
+            border-radius: 20px; 
+            padding: 40px;
+            box-shadow: 0 0 30px var(--shadow); 
+        }
+
+        h1 { text-align: center; color: var(--accent-color); margin-bottom: 10px; }
+        .subtitle { text-align: center; font-size: 13px; color: var(--secondary-text); margin-bottom: 30px; }
+
+        input, textarea { 
+            width: 100%; padding: 12px; margin: 10px 0; background: var(--input-bg); 
+            border: none; border-bottom: 2px solid var(--accent-color); 
+            color: var(--text-color); outline: none; 
+        }
+        textarea { height: 100px; resize: none; }
+
+        .btn { 
+            width: 100%; margin-top: 20px; padding: 12px; background: transparent; 
+            border: 1.5px solid var(--accent-color); color: var(--accent-color); 
+            border-radius: 25px; cursor: pointer; font-weight: 600; 
+            text-transform: uppercase;
+        }
+        .btn:hover { background: var(--accent-color); color: var(--card-bg); box-shadow: 0 0 15px var(--accent-color); }
+
+        .divider { height: 1px; background: var(--accent-color); opacity: 0.2; margin: 30px 0; }
+
+        /* Social Links */
+        .info-link { 
+            display: flex; align-items: center; gap: 15px; color: var(--text-color); 
+            text-decoration: none; font-size: 14px; margin-bottom: 15px; opacity: 0.8;
+        }
+        .info-link i { color: var(--accent-color); font-size: 18px; width: 25px; text-align: center; }
+        .info-link:hover { opacity: 1; transform: translateX(5px); color: var(--accent-color); }

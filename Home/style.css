@@ -1,0 +1,200 @@
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        /* 1. MATCHING LOGIN PAGE VARIABLES */
+        :root {
+            --bg-color: #050505;
+            --card-bg: #0a1111;
+            --text-color: #ffffff;
+            --accent-color: #00f2ff; /* Zenith/Login Cyan */
+            --input-bg: rgba(255, 255, 255, 0.05);
+            --shadow: rgba(0, 242, 255, 0.2);
+            --text-dim: #888888;
+        }
+
+        /* LIGHT MODE VARIABLES */
+        body.light-mode {
+            --bg-color: #f0f2f5;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --accent-color: #007bff; /* Professional Blue */
+            --input-bg: #f9f9f9;
+            --shadow: rgba(0, 0, 0, 0.1);
+            --text-dim: #666666;
+        }
+
+        * { 
+            box-sizing: border-box; 
+            font-family: 'Poppins', sans-serif; 
+            transition: background 0.3s, color 0.3s, border 0.3s; 
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Main Hero Card */
+        .hero-card {
+            background-color: var(--card-bg);
+            width: 95%;
+            max-width: 1100px;
+            border-radius: 20px;
+            border: 1.5px solid var(--accent-color);
+            box-shadow: 0 0 30px var(--shadow);
+            position: relative;
+            overflow: hidden;
+            animation: fadeIn 0.6s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 40px;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--accent-color);
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dim);
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--accent-color);
+        }
+
+        /* Theme Toggle Button (Sun/Moon) */
+        .theme-switch-btn {
+            background: transparent;
+            border: 1.5px solid var(--accent-color);
+            color: var(--accent-color);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .theme-switch-btn:hover {
+            background: var(--accent-color);
+            color: var(--card-bg);
+        }
+
+        /* Hero Content */
+        .hero-body {
+            display: flex;
+            padding: 40px 60px 80px 60px;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .content-left { flex: 1.2; }
+        .content-right { flex: 0.8; }
+
+        h1 {
+            font-size: 38px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+
+        h1 span { color: var(--accent-color); }
+
+        p {
+            color: var(--text-dim);
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 35px;
+            max-width: 480px;
+        }
+
+        /* Button - Styled like Login Button */
+        .btn-main {
+            background-color: transparent;
+            color: var(--accent-color);
+            padding: 12px 35px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s ease;
+            border: 1.5px solid var(--accent-color);
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        .btn-main:hover {
+            background-color: var(--accent-color);
+            color: var(--card-bg);
+            box-shadow: 0 0 20px var(--shadow);
+        }
+
+        /* Graphic Mockup */
+        .dashboard-graphic {
+            background: var(--input-bg);
+            border: 1px solid var(--accent-color);
+            border-radius: 15px;
+            padding: 25px;
+            position: relative;
+            backdrop-filter: blur(10px);
+        }
+
+        .chart-mockup {
+            width: 100%;
+            height: 180px;
+            border-bottom: 2px solid var(--accent-color);
+            display: flex;
+            align-items: flex-end;
+            gap: 12px;
+            padding-bottom: 10px;
+        }
+
+        .bar {
+            flex: 1;
+            background: var(--accent-color);
+            border-radius: 4px 4px 0 0;
+            opacity: 0.6;
+            transition: 0.5s ease;
+        }
+        
+        .bar:hover { opacity: 1; transform: scaleY(1.05); }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-body { flex-direction: column; text-align: center; padding: 40px 20px; }
+            .nav-links { display: none; } /* Mobile menu can be added later */
+            p { margin: 0 auto 30px auto; }
+        }
