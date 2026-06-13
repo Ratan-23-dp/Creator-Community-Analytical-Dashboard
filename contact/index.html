@@ -8,15 +8,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    <button class="theme-switch" id="themeBtn">
-    <i class="fas fa-moon" id="themeIcon"></i>
-</button>
+    <nav class="top-nav">
+        <a href="../Home/index.html" class="brand">Analytix<span>Core</span></a>
+        <div class="nav-links">
+            <a href="../Home/index.html">Home</a>
+            <a href="../About/index.html">About</a>
+            <a href="../Dashboard/index.html">Dashboard</a>
+            <a href="../Login/index.html">Login</a>
+            <button class="theme-switch" id="themeBtn" type="button" aria-label="Toggle theme">
+                <i class="fas fa-moon" id="themeIcon"></i>
+            </button>
+        </div>
+    </nav>
 
     <div class="contact-card">
         <h1>Contact Support</h1>
         <p class="subtitle">Enter your problem and it will be sent to my email.</p>
         
-        <form id="contactForm" action="https://formspree.io/f/mayankkumariitian65@gmail.com" method="POST">
+        <form id="contactForm" action="mailto:mayankkumariitian65@gmail.com" method="POST">
             <input type="text" name="name" id="name" placeholder="Full Name" required>
             <input type="email" name="email" id="email" placeholder="Your Email" required>
             <textarea name="message" id="message" placeholder="Describe your problem here..." required></textarea>

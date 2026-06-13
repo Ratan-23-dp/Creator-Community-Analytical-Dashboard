@@ -16,6 +16,45 @@ body {
 header { 
     display: flex; justify-content: space-between; align-items: center; 
     padding-bottom: 20px; border-bottom: 1px solid var(--border); margin-bottom: 20px;
+    gap: 20px;
+}
+
+.logo {
+    color: var(--text);
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.logo span,
+.page-links a:hover {
+    color: var(--accent);
+}
+
+.nav-actions,
+.page-links {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.page-links a {
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 700;
+    opacity: 0.75;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+select,
+button {
+    background: var(--card);
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-radius: 8px;
+    padding: 9px 12px;
 }
 
 .dashboard-grid {
@@ -44,6 +83,9 @@ td { padding: 12px 0; border-top: 1px solid var(--border); }
     .line-chart-container, .pie-chart-container, .table-container { grid-column: span 2; }
 }
 @media (max-width: 600px) {
+    header { align-items: flex-start; flex-direction: column; }
+    .nav-actions { width: 100%; }
+    .page-links { width: 100%; gap: 12px; }
     .dashboard-grid { grid-template-columns: 1fr; }
     .kpi, .line-chart-container, .pie-chart-container, .table-container { grid-column: span 1; }
 }

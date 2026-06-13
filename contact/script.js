@@ -3,6 +3,7 @@
     const themeIcon = document.getElementById('themeIcon');
     const body = document.body;
 
+if (themeBtn && themeIcon) {
     themeBtn.addEventListener('click', () => {
         body.classList.toggle('light-mode');
         if (body.classList.contains('light-mode')) {
@@ -18,13 +19,28 @@
         body.classList.add('light-mode');
         themeIcon.classList.replace('fa-moon', 'fa-sun');
     }
+}
 
     // 2. FORM SUBMISSION LOGIC (No Reload)
     const contactForm = document.getElementById('contactForm');
     const submitBtn = document.getElementById('submitBtn');
 
+if (contactForm && submitBtn) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
+
+        if (contactForm.action.startsWith('mailto:')) {
+            const subject = encodeURIComponent(`Support request from ${document.getElementById('name').value}`);
+            const bodyText = encodeURIComponent(
+                `Name: ${document.getElementById('name').value}\n` +
+                `Email: ${document.getElementById('email').value}\n\n` +
+                document.getElementById('message').value
+            );
+            window.location.href = `${contactForm.action}?subject=${subject}&body=${bodyText}`;
+            contactForm.reset();
+            return;
+        }
+
         submitBtn.innerHTML = "Sending...";
         submitBtn.disabled = true;
 
@@ -46,3 +62,4 @@
             submitBtn.disabled = false;
         });
     });
+}

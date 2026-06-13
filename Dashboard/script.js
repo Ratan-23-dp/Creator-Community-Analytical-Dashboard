@@ -3,12 +3,24 @@ let pieChart = null;
 let db = null;
 
 async function start() {
-    const res = await fetch('data.json');
-    db = await res.json();
-    refresh('youtube');
+    try {
+        const res = await fetch('data.json');
+        if (!res.ok) {
+            throw new Error(`Could not load dashboard data: ${res.status}`);
+        }
+        db = await res.json();
+        refresh('youtube');
+    } catch (error) {
+        const grid = document.querySelector('.dashboard-grid');
+        if (grid) {
+            grid.innerHTML = `<div class="card table-container"><h3>Unable to load dashboard data</h3><p>${error.message}</p></div>`;
+        }
+        console.error(error);
+    }
 }
 
 function refresh(platform) {
+    if (!db || !db[platform]) return;
     const data = db[platform];
     
     // Stats & Table update

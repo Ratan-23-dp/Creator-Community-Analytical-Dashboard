@@ -32,14 +32,55 @@
             min-height: 100vh; 
             margin: 0; 
             color: var(--text-color); 
-            padding: 20px;
+            padding: 110px 20px 30px;
+        }
+
+        .top-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            padding: 18px 40px;
+            background: var(--card-bg);
+            border-bottom: 1.5px solid var(--accent-color);
+            box-shadow: 0 0 20px var(--shadow);
+            z-index: 10;
+        }
+
+        .brand {
+            color: var(--text-color);
+            font-size: 22px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .brand span,
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: var(--secondary-text);
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: uppercase;
         }
 
         /* Theme Toggle Button */
         .theme-switch {
-            position: absolute;
-            top: 20px;
-            right: 20px;
+            position: static;
             background: var(--card-bg);
             border: 1.5px solid var(--accent-color);
             color: var(--accent-color);
@@ -92,3 +133,9 @@
         }
         .info-link i { color: var(--accent-color); font-size: 18px; width: 25px; text-align: center; }
         .info-link:hover { opacity: 1; transform: translateX(5px); color: var(--accent-color); }
+
+        @media (max-width: 700px) {
+            body { padding-top: 150px; }
+            .top-nav { flex-direction: column; padding: 14px 20px; }
+            .nav-links { justify-content: center; gap: 12px; }
+        }
